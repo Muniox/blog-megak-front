@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Logo from './assets/logo.svg';
 import Programmer from './assets/programmer.svg';
 import { Sidebar } from './Component/Sidebar';
+import { CollapsibleList } from './Component/Collapse';
 
 // @TODO zaimportować google fonts do reacta
 
@@ -26,11 +27,16 @@ export const App: FC = () => (
         Zarejestruj się
       </button>
     </header>
-    <main>
+    <main className="p-2.5">
       <input
         type="text"
         placeholder="szukaj tematu"
-        className="px-3 py-1 w-48 block mx-auto rounded-full bg-gray-200 placeholder:text-gray-500"
+        className="w-48 shadow-sm block mx-auto rounded-full bg-gray-200 placeholder:text-gray-500 mt-5"
+      />
+
+      <CollapsibleList />
+      <hr
+        className="mt-1 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
       />
     </main>
     <footer>

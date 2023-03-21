@@ -15,9 +15,9 @@ export default defineConfig({
       map: true,
       parser: postcssScss,
       plugins: [
+        postcssNested({}),
         tailwindcss(),
         autoprefixer({}),
-        postcssNested({}),
       ]
     }
   },
