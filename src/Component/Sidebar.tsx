@@ -16,8 +16,8 @@ export const Sidebar = () => {
       ) : (
         <svg
           onClick={() => setShowSidebar(!showSidebar)}
-          className="absolute z-30 flex items-center cursor-pointer right-10 top-6 sm:hidden"
-          fill="#2563EB"
+          className="absolute z-30 flex items-center cursor-pointer right-2.5 top-1/2 sm:hidden -translate-y-1/2"
+          fill="#363636"
           viewBox="0 0 100 80"
           width="40"
           height="40"
@@ -29,7 +29,7 @@ export const Sidebar = () => {
       )}
 
       <div
-        className={`top-0 right-0 w-[65vw] bg-blue-600  p-10 pl-20 text-white fixed h-full z-40  ease-in-out duration-300 ${
+        className={`top-0 right-0 w-[65vw] bg-gray-600 p-10 pl-20 text-white fixed h-full z-40  ease-in-out duration-300 ${
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
