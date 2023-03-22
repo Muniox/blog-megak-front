@@ -8,7 +8,7 @@ export const Sidebar = () => {
       {showSidebar ? (
         <button
           type="button"
-          className="flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 sm:hidden"
+          className="flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50 md:hidden"
           onClick={() => setShowSidebar(!showSidebar)}
         >
           x
@@ -16,7 +16,7 @@ export const Sidebar = () => {
       ) : (
         <svg
           onClick={() => setShowSidebar(!showSidebar)}
-          className="absolute z-30 flex items-center cursor-pointer right-2.5 top-1/2 sm:hidden -translate-y-1/2"
+          className="absolute z-30 flex items-center cursor-pointer right-2.5 top-1/2 md:hidden -translate-y-1/2"
           fill="#363636"
           viewBox="0 0 100 80"
           width="40"
@@ -29,13 +29,26 @@ export const Sidebar = () => {
       )}
 
       <div
-        className={`top-0 right-0 w-[65vw] bg-gray-600 p-10 pl-20 text-white fixed h-full z-40  ease-in-out duration-300 ${
+        className={`top-0 right-0 bottom-0 w-[65vw] sm:w-[45vw] bg-gray-600 p-10 pl-20 text-white fixed navbar-full z-40  ease-in-out duration-300 overflow-y-scroll ${
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
-        <h3 className="mt-20 text-4xl font-semibold text-white">
-          I am a sidebar
-        </h3>
+        <nav className="mt-16 text-xl font-semibold text-white">
+          <ul className="leading-10">
+            <li>
+              <a href="/" className="leading-10 block py-3">O nas</a>
+            </li>
+            <li>
+              <a href="/" className="leading-10 block py-3">Blog</a>
+            </li>
+            <li>
+              <a href="/" className="leading-10 block py-3">Kontakt</a>
+            </li>
+            <li>
+              <a href="/" className="leading-10 block py-3">Logowanie</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </>
   );
