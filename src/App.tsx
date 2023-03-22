@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import Logo from './assets/logo.svg';
 import Programmer from './assets/programmer.svg';
-import { Sidebar } from './Component/Sidebar';
-import { CollapsibleList } from './Component/Collapse';
+import { Sidebar } from './components/Sidebar';
+import { CollapsibleList } from './components/Collapse';
 import Glass from './assets/glass.svg';
 import defaultUserImg from './assets/deafult_author.svg';
 
@@ -70,6 +70,10 @@ export const App: FC = () => (
 
       <div className="mt-20 flex flex-col max-w-[580px] items-start mx-auto">
         <img src="/upload/default.png" alt="" className="rounded-3xl" />
+        <p className="font-bold">
+          Opublikowane:
+          <span>10-03-200</span>
+        </p>
         <h2 className="font-light text-2xl mt-2 leading-10">Programowanie aplikacji - jaki framework wybrać?</h2>
         <div className="flex items-center gap-5 mt-3">
           <img src={defaultUserImg} alt="zdjęcie autora postu" />
@@ -91,7 +95,7 @@ export const App: FC = () => (
         </button>
       </div>
     </main>
-    <footer>
+    <footer className="pb-3">
       <hr
         className="mb-2 mt-10 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
       />
