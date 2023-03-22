@@ -13,7 +13,7 @@ export const CollapsibleList = () => {
       <div className="mt-10 border-blue-400 border">
         <button
           type="button"
-          className={`block w-full text-left text-blue-400 text-xl font-light leading-10 relative p-4 border-b ${isOpen && 'border-blue-400'}`}
+          className={`block w-full text-left text-blue-400 text-xl font-light leading-10 relative px-4 py-1  border-b ${isOpen && 'border-blue-400'}`}
           onClick={toggleList}
         >
           Kategorie
@@ -22,25 +22,25 @@ export const CollapsibleList = () => {
         {isOpen && (
         <ul className="leading-6 transition ease-in-out delay-150">
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">React</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">React</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">Vanilla JavaScript</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Vanilla JavaScript</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">Node</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Node</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">Express</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Express</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">TypeScript</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">TypeScript</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">NestJS</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">NestJS</a>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 p-5">Other</a>
+            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Other</a>
           </li>
         </ul>
         )}
