@@ -15,8 +15,8 @@ export const Header = () => {
   };
 
   return (
-    <header className="fix-min-h-header z-40">
-      <div className="md:flex xl:mt-20">
+    <header className="fix-min-h-header z-30">
+      <div className="md:flex xl:mt-10 md:mt-24">
         <div>
           <h1 className="font-bold text-2xl text-center mt-5 md:text-left md:text-5xl xl:text-7xl">
             JavaScript
@@ -33,16 +33,18 @@ export const Header = () => {
         </div>
         <img src={Programmer} alt="Programista" className="mx-auto mt-4 md:max-w-[483px] xl:max-w-none xl:min-w-[702px] xl:mt-10" />
       </div>
-      <div className="md:flex md:items-center mt-5 gap-3">
+      <div className="md:flex md:items-center gap-3">
         <button
           type="button"
-          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0"
+          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0"
         >
           Zarejestruj się
         </button>
         <p className="hidden md:inline">jeśli chcesz do nas dołączyć oraz pomóc w rozwijaniu bloga.</p>
       </div>
-      <img src={Arrow} alt="" className="" onClick={handleClickScroll} />
+      <div className="mt-5 flex justify-center">
+        <img src={Arrow} alt="" className="max-w-[70px] md:max-w-[90]" onClick={handleClickScroll} />
+      </div>
     </header>
   );
 };

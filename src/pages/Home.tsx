@@ -8,9 +8,9 @@ import { Header } from '../components/Header';
 export const Home = () => (
   <>
     <Header />
-    <img src={Shape} alt="decoration shape" className="absolute top-44 right-1/2 translate-x-1/2 z-10 hidden xl:inline w-[1400px]" />
+    <img src={Shape} alt="decoration shape" className="absolute top-32 right-1/2 translate-x-1/2 z-10 hidden xl:inline w-[1400px]" />
     <main className="mt-8 flex-grow" id="menu">
-      <form className="relative max-w-min mx-auto md:ml-auto md:mr-0">
+      <form className="relative max-w-min mx-auto md:ml-auto md:mr-0 mt-5">
         <input
           type="text"
           placeholder="szukaj tematu"

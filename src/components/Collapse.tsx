@@ -10,7 +10,7 @@ export const CollapsibleList = () => {
 
   return (
     <>
-      <div className="mt-10 border-blue-400 border">
+      <div className="mt-5 border-blue-400 border">
         <button
           type="button"
           className={`block w-full text-left text-blue-400 text-xl font-light leading-10 relative px-4 py-1  border-b ${isOpen && 'border-blue-400'}`}
