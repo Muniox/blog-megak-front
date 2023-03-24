@@ -39,7 +39,7 @@ export const Home = () => (
           <div className="flex gap-8 mt-4 w-full xl:mt-0">
             <p className="font-bold hidden md:inline">
               Opublikowane:
-              <span className="text-blue-400 ml-2">10-03-200</span>
+              <span className="text-blue-400 ml-2">10-03-2020</span>
             </p>
             <p className="font-bold hidden md:inline">
               Kategoria:
