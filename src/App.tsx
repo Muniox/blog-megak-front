@@ -1,20 +1,41 @@
 import React, { FC } from 'react';
-import Logo from './assets/logo.svg';
-import { Sidebar } from './Component/Sidebar';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from 'react-router-dom';
+import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
+import { Home } from './pages/Home';
+import { Login } from './pages/Login';
 
-// @TODO zaimportować google fonts do reacta
+const Layout = () => (
+  <>
+    <Navbar />
+    <Outlet />
+    <Footer />
+  </>
+);
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+]);
 
 export const App: FC = () => (
-  <div className="container mx-auto border-4 fix-min-h-screen max-w-screen-xl relative">
-    <Sidebar />
-    <header className="px-2.5 mt-5">
-      <img src={Logo} alt="Logo JS DOSE - Your Daily Dose of JS" className="w-1/2 max-w-min" />
-    </header>
-    <main>
-      to jest main
-    </main>
-    <footer>
-      to jest footer
-    </footer>
+  <div className="container mx-auto fix-min-h-screen max-w-screen-xl p-2.5 flex flex-col md:p-5">
+    <RouterProvider router={router} />
   </div>
 );
