@@ -22,7 +22,7 @@ export const Navbar = () => (
         </a>
       </li>
       <li>
-        <a href="/" className="block px-3 py-0.5 hover:text-blue-400">
+        <a href="/login" className="block px-3 py-0.5 hover:text-blue-400">
           Logowanie
         </a>
       </li>

@@ -35,6 +35,11 @@
     "@typescript-eslint/no-unused-vars": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "import/prefer-default-export": [0],
-    "import/extensions": [0]
+    "import/extensions": [0],
+    "import/no-unresolved": [ 2, {
+      "ignore": [
+        "^types$"
+      ]
+    }]
   }
 }

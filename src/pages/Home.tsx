@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { PostEntityResponse } from 'types';
 import Shape from '../assets/shape.svg';
 import { CollapsibleList } from '../components/Collapse';
 import Glass from '../assets/glass.svg';
-import defaultUserImg from '../assets/deafult_author.svg';
 import { Header } from '../components/Header';
+import { Post } from '../components/Post';
 
 export const Home = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [posts, setPosts] = useState([]);
+  // @TODO ogranicz description do 200 znaków
+  const [posts, setPosts] = useState<PostEntityResponse[] | []>([]);
 
   const cat = useLocation().search;
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_PATH}posts${cat}`);
-        console.log(res.data);
+        const res = await axios.get<PostEntityResponse[]>(`${import.meta.env.VITE_PATH}posts${cat}`);
         setPosts(await res.data);
       } catch (error) {
         console.log(error);
@@ -57,43 +57,19 @@ export const Home = () => {
           Artykuły tworzymy na bazie wieloletniego doświadczenia naszych specjalistów,
           więc o rzetelność informacji nie musisz się martwić.
         </div>
-        <div className="mt-20 flex flex-col max-w-[580px] items-start mx-auto xl:flex-row xl:max-w-full">
-          <img src="/upload/default.png" alt="" className="rounded-3xl xl:order-last" />
-          <div>
-            <div className="flex gap-8 mt-4 w-full xl:mt-0">
-              <p className="font-bold hidden md:inline">
-                Opublikowane:
-                <span className="text-blue-400 ml-2">10-03-200</span>
-              </p>
-              <p className="font-bold hidden md:inline">
-                Kategoria:
-                <span className="text-blue-400 ml-2">Vanilla JavaScript</span>
-              </p>
-            </div>
-            <h2 className="font-light text-2xl mt-2 leading-8 md:text-3xl">
-              Programowanie aplikacji - jaki framework
-              wybrać?
-            </h2>
-            <div className="flex items-center gap-6 mt-3">
-              <img src={defaultUserImg} alt="zdjęcie autora postu" />
-              <p className="font-bold">
-                Autor:
-                <span className="text-blue-400 ml-2">John Doe</span>
-              </p>
-            </div>
-            <p className="mt-3 font-light leading-8 text-xl">
-              Programowanie aplikacji to trudny proces, którego
-              powodzenie zależy od wybrania odpowiednich technologii.
-              JavaScript to obecnie podstawa praktycznie wszystkich aplikacji webowych.
-            </p>
-            <button
-              type="button"
-              className="rounded-full px-5 py-2 mt-3 text-blue-400 border-blue-400 border text-base md:text-xl"
-            >
-              Czytaj więcej
-            </button>
-          </div>
-        </div>
+        {posts.length === 0 ? <div className="text-2xl text-center mt-10 font-light"> Brak postów</div>
+          : posts.map((post) => (
+            <Post
+              id={post.id}
+              title={post.title}
+              desc={post.desc}
+              img={post.img}
+              date={post.date}
+              category={post.category}
+              author={post.author}
+              key={post.id}
+            />
+          ))}
       </main>
     </>
   );

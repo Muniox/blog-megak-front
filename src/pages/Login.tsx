@@ -43,10 +43,23 @@ export const Login = () => {
   };
 
   return (
-    <div className="auth">
+    <div className="mt-8 flex-grow">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="name" name="name" onChange={handleChange} />
+        <label
+          htmlFor="name"
+          className="relative inline-block border-amber-400"
+        >
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            id="name"
+            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400"
+          />
+          <span className="text-4xl text absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 input-text px-1 text-gray-500 font-light">Name</span>
+        </label>
+
         <input type="password" placeholder="password" name="password" onChange={handleChange} />
         <button type="submit">Login</button>
         {err && <p>{err}</p>}

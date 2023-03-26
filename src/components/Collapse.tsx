@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import chevronDoubleDown from '../assets/chevron-double-down.svg';
 
 export const CollapsibleList = () => {
@@ -22,25 +23,76 @@ export const CollapsibleList = () => {
         {isOpen && (
         <ul className="leading-6 transition ease-in-out delay-150">
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">React</a>
+            <Link
+              to="/"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Wszystkie
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Vanilla JavaScript</a>
+            <Link
+              to="/?cat=react"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              React
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Node</a>
+            <Link
+              to="/?cat=vanilla%20javascript"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Vanilla JavaScript
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Express</a>
+            <Link
+              to="/?cat=node"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Node
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">TypeScript</a>
+            <Link
+              to="/?cat=express"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Express
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">NestJS</a>
+            <Link
+              to="/?cat=typescript"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              TypeScript
+            </Link>
           </li>
           <li>
-            <a href="/" className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3">Other</a>
+            <Link
+              to="/?cat=nestjs"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              NestJS
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/?cat=other"
+              className="w-full block hover:text-white hover:bg-blue-400 px-4 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Other
+            </Link>
           </li>
         </ul>
         )}
