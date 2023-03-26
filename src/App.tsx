@@ -7,6 +7,7 @@ import {
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
+import { Login } from './pages/Login';
 
 const Layout = () => (
   <>
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
     ],
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
 ]);
 

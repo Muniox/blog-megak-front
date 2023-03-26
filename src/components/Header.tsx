@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import Programmer from '../assets/programmer.svg';
 import Arrow from '../assets/arrow.svg';
@@ -43,7 +40,9 @@ export const Header = () => {
         <p className="hidden md:inline">jeśli chcesz do nas dołączyć oraz pomóc w rozwijaniu bloga.</p>
       </div>
       <div className="mt-5 flex justify-center">
-        <img src={Arrow} alt="" className="max-w-[70px] md:max-w-[90]" onClick={handleClickScroll} />
+        <button type="button" onClick={handleClickScroll}>
+          <img src={Arrow} alt="" className="max-w-[70px] md:max-w-[90]" />
+        </button>
       </div>
     </header>
   );
