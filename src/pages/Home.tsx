@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { PostEntityResponse } from 'types';
 import Shape from '../assets/shape.svg';
@@ -48,6 +48,77 @@ export const Home = () => {
           </button>
         </form>
         <CollapsibleList />
+        <div className="mt-5">
+          <ul className="flex place-content-between">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? 'w-full text-xl block text-blue-400 px-4 py-3' : 'w-full text-xl block hover:text-blue-400 px-4 py-3')}
+              >
+                Wszystkie
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="?cat=react"
+                className={({ isActive }) => (isActive ? 'w-full text-xl block text-red-400 px-4 py-3' : 'w-full text-xl block text-blue-400 px-4 py-3')}
+              >
+                React
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=vanilla%20javascript"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                Vanilla JavaScript
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=node"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                Node
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=express"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                Express
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=typescript"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                TypeScript
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=nestjs"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                NestJS
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/?cat=other"
+                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+              >
+                Other
+              </NavLink>
+            </li>
+          </ul>
+          <hr
+            className="my-2 h-0.5 border-t-0 bg-blue-400 opacity-100 dark:opacity-50"
+          />
+        </div>
         <div className="font-light leading-9 text-base md:text-base md:leading-6 md:tracking-wide">
           W naszej codziennej pracy w wielu projektach używamy technologii JavaScript,
           szczególnie Express oraz React.

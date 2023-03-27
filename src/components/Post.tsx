@@ -53,7 +53,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
         <Link to={`${import.meta.env.VITE_PATH}posts/${id}`}>
           <button
             type="button"
-            className="rounded-full px-5 py-2 mt-3 text-blue-400 border-blue-400 border text-base md:text-xl hover:bg-blue-400 hover:text-white transition"
+            className="rounded-full px-5 py-2 mt-3 text-blue-400 border-blue-400 border text-base md:text-xl hover:bg-blue-400 hover:text-white transition duration-300"
           >
             Czytaj więcej
           </button>
