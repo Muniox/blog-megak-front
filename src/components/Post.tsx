@@ -20,7 +20,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
     : format(postDate, 'dd-MM-yyyy');
 
   return (
-    <div className="mt-20 flex flex-col max-w-[580px] items-start mx-auto xl:flex-row xl:max-w-full xl:gap-10 xl:place-content-between xl:odd:flex-row-reverse">
+    <div className="mt-20 flex flex-col max-w-[580px] items-start mx-auto xl:flex-row xl:max-w-full xl:gap-10 xl:place-content-between xl:even:flex-row-reverse">
       <img src={`/upload/${img}`} alt="" className="rounded-3xl xl:order-last" />
       <div>
         <div className="flex gap-8 mt-4 w-full xl:mt-0">

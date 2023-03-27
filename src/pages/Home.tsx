@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { PostEntityResponse } from 'types';
 import Shape from '../assets/shape.svg';
@@ -51,68 +51,68 @@ export const Home = () => {
         <div className="mt-5">
           <ul className="flex place-content-between">
             <li>
-              <NavLink
+              <Link
                 to="/"
-                className={({ isActive }) => (isActive ? 'w-full text-xl block text-blue-400 px-4 py-3' : 'w-full text-xl block hover:text-blue-400 px-4 py-3')}
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 Wszystkie
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="?cat=react"
-                className={({ isActive }) => (isActive ? 'w-full text-xl block text-red-400 px-4 py-3' : 'w-full text-xl block text-blue-400 px-4 py-3')}
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 React
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=vanilla%20javascript"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 Vanilla JavaScript
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=node"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 Node
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=express"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 Express
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=typescript"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 TypeScript
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=nestjs"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 NestJS
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/?cat=other"
-                className="w-full text-xl block hover:text-blue-400 px-4 py-3"
+                className="w-full xl:text-base md:block hover:text-blue-400 px-4 py-3 md:text-sm hidden"
               >
                 Other
-              </NavLink>
+              </Link>
             </li>
           </ul>
           <hr

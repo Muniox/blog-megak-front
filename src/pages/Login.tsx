@@ -44,28 +44,59 @@ export const Login = () => {
 
   return (
     <div className="mt-8 flex-grow">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <h1
+        className="text-4xl"
+      >
+        Login
+      </h1>
+      <form
+        onSubmit={handleSubmit}
+        className="flex mt-6 gap-10 justify-center items-center flex-col"
+      >
         <label
           htmlFor="name"
-          className="relative inline-block border-amber-400"
+          className="relative border-amber-400"
         >
           <input
             type="text"
-            name="name"
             onChange={handleChange}
             id="name"
-            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400"
+            placeholder=" "
+            autoComplete="off"
+            name="name"
+            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput"
           />
-          <span className="text-4xl text absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 input-text px-1 text-gray-500 font-light">Name</span>
+          <span
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+          >
+            Pseudonim
+          </span>
         </label>
 
-        <input type="password" placeholder="password" name="password" onChange={handleChange} />
+        <label
+          htmlFor="password"
+          className="relative border-amber-400"
+        >
+          <input
+            type="password"
+            onChange={handleChange}
+            id="password"
+            placeholder=" "
+            autoComplete="off"
+            name="password"
+            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput"
+          />
+          <span
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+          >
+            Hasło
+          </span>
+        </label>
         <button type="submit">Login</button>
         {err && <p>{err}</p>}
         <span>
-          Don &apos;t you have an account?
-          <Link to="/register">Register</Link>
+          Nie masz jeszcza konta?
+          <Link to="/register">Zarejestruj się</Link>
         </span>
       </form>
     </div>
