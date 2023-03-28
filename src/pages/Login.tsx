@@ -43,11 +43,11 @@ export const Login = () => {
   };
 
   return (
-    <div className="mt-8 flex-grow">
+    <div className="mt-8 flex-grow flex flex-col items-center justify-center gap-10">
       <h1
         className="text-4xl"
       >
-        Login
+        Logowanie
       </h1>
       <form
         onSubmit={handleSubmit}
@@ -64,7 +64,7 @@ export const Login = () => {
             placeholder=" "
             autoComplete="off"
             name="name"
-            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput"
           />
           <span
             className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
@@ -84,7 +84,7 @@ export const Login = () => {
             placeholder=" "
             autoComplete="off"
             name="password"
-            className="text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput"
           />
           <span
             className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
@@ -92,7 +92,7 @@ export const Login = () => {
             Hasło
           </span>
         </label>
-        <button type="submit">Login</button>
+        <button type="submit">Zaloguj</button>
         {err && <p>{err}</p>}
         <span>
           Nie masz jeszcza konta?
