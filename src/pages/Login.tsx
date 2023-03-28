@@ -43,16 +43,60 @@ export const Login = () => {
   };
 
   return (
-    <div className="auth">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="name" name="name" onChange={handleChange} />
-        <input type="password" placeholder="password" name="password" onChange={handleChange} />
-        <button type="submit">Login</button>
+    <div className="mt-8 flex-grow flex flex-col items-center justify-center gap-10">
+      <h1
+        className="text-4xl"
+      >
+        Logowanie
+      </h1>
+      <form
+        onSubmit={handleSubmit}
+        className="flex mt-6 gap-10 justify-center items-center flex-col"
+      >
+        <label
+          htmlFor="name"
+          className="relative border-amber-400"
+        >
+          <input
+            type="text"
+            onChange={handleChange}
+            id="name"
+            placeholder=" "
+            autoComplete="off"
+            name="name"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput"
+          />
+          <span
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+          >
+            Pseudonim
+          </span>
+        </label>
+
+        <label
+          htmlFor="password"
+          className="relative border-amber-400"
+        >
+          <input
+            type="password"
+            onChange={handleChange}
+            id="password"
+            placeholder=" "
+            autoComplete="off"
+            name="password"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput"
+          />
+          <span
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+          >
+            Hasło
+          </span>
+        </label>
+        <button type="submit">Zaloguj</button>
         {err && <p>{err}</p>}
         <span>
-          Don &apos;t you have an account?
-          <Link to="/register">Register</Link>
+          Nie masz jeszcza konta?
+          <Link to="/register">Zarejestruj się</Link>
         </span>
       </form>
     </div>

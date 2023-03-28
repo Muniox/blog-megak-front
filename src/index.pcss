@@ -7,9 +7,27 @@
     }
 }
 
-//* {
-//    border: 1px solid gray
-//}
+.myNameInput:focus ~ .input-text, 
+.myNameInput:not(:placeholder-shown).myNameInput:not(:focus) ~ .input-text {
+    @apply bg-white transform top-0 scale-50 -translate-x-[2.37rem] text-inherit;
+}
+
+.myPasswordInput:focus ~ .input-text, 
+.myPasswordInput:not(:placeholder-shown).myPasswordInput:not(:focus) ~ .input-text {
+    @apply bg-white transform top-0 scale-50 -translate-x-5 text-inherit;
+}
+
+.myInput:not(:placeholder-shown).myInput:focus ~ .input-text {
+    @apply text-blue-400
+}
+
+.myInput:placeholder-shown.myInput:focus ~ .input-text {
+    @apply text-blue-400
+}
+
+/* * {
+    border: 1px solid gray
+} */
 
 Body {
     color: #363636
