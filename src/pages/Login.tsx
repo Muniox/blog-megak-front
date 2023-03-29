@@ -58,16 +58,17 @@ export const Login = () => {
           className="relative border-amber-400"
         >
           <input
+            required
             type="text"
             onChange={handleChange}
             id="name"
             placeholder=" "
             autoComplete="off"
             name="name"
-            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myNameInput myInput relative z-20 bg-transparent"
           />
           <span
-            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text z-10"
           >
             Pseudonim
           </span>
@@ -78,16 +79,17 @@ export const Login = () => {
           className="relative border-amber-400"
         >
           <input
+            required
             type="password"
             onChange={handleChange}
             id="password"
             placeholder=" "
             autoComplete="off"
             name="password"
-            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput"
+            className="w-[220px] sm:w-full text-2xl border-2 rounded-lg transition duration-200 focus:border-blue-400 focus:ring-blue-400 myPasswordInput myInput relative z-20 bg-transparent"
           />
           <span
-            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text"
+            className="text-2xl absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 px-1 text-gray-400 input-text z-10"
           >
             Hasło
           </span>
@@ -95,8 +97,8 @@ export const Login = () => {
         <button type="submit">Zaloguj</button>
         {err && <p>{err}</p>}
         <span>
-          Nie masz jeszcza konta?
-          <Link to="/register">Zarejestruj się</Link>
+          Nie masz jeszcze konta?
+          <Link to="/register"> Zarejestruj się</Link>
         </span>
       </form>
     </div>
