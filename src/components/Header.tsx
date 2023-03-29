@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Programmer from '../assets/programmer.svg';
 import Arrow from '../assets/arrow.svg';
 
@@ -31,12 +32,14 @@ export const Header = () => {
         <img src={Programmer} alt="Programista" className="mx-auto mt-4 md:max-w-[483px] xl:max-w-none xl:min-w-[702px] xl:mt-10" />
       </div>
       <div className="md:flex md:items-center gap-3">
-        <button
-          type="button"
-          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0"
-        >
-          Zarejestruj się
-        </button>
+        <Link to="/register">
+          <button
+            type="button"
+            className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0"
+          >
+            Zarejestruj się
+          </button>
+        </Link>
         <p className="hidden md:inline">jeśli chcesz do nas dołączyć oraz pomóc w rozwijaniu bloga.</p>
       </div>
       <div className="mt-5 flex justify-center">
