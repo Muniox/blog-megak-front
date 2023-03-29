@@ -11,6 +11,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
   } = props;
 
   const shortDesc = desc.length > 300 ? `${desc.substring(0, 300)}...` : desc;
+
   const postDate = new Date(date);
   const now = new Date();
   const isWithin7Days = (now.getTime() - postDate.getTime()) <= 7 * 24 * 60 * 60 * 1000;
