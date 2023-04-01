@@ -95,7 +95,7 @@ export const Login = () => {
           </span>
         </label>
         <button type="submit">Zaloguj</button>
-        {err && <p>{err}</p>}
+        {err && <p className="text-red-600">{err}</p>}
         <span>
           Nie masz jeszcze konta?
           <Link to="/register"> Zarejestruj się</Link>

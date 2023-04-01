@@ -37,13 +37,13 @@ export const Sidebar = () => {
         <nav className="mt-16 text-xl font-semibold text-white">
           <ul className="leading-10">
             <li>
-              <Link to="/" className="leading-10 block py-3">O nas</Link>
+              <Link to="/about" className="leading-10 block py-3">O nas</Link>
             </li>
             <li>
               <Link to="/" className="leading-10 block py-3">Blog</Link>
             </li>
             <li>
-              <Link to="/" className="leading-10 block py-3">Kontakt</Link>
+              <Link to="/contact" className="leading-10 block py-3">Kontakt</Link>
             </li>
             <li>
               <Link to="/login" className="leading-10 block py-3">Logowanie</Link>

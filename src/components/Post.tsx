@@ -36,7 +36,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
             </span>
           </p>
         </div>
-        <Link to={`${import.meta.env.VITE_PATH}posts/${id}`}>
+        <Link to={`/posts/${id}`}>
           <h2 className="font-light text-2xl mt-2 leading-8 md:text-3xl hover:text-blue-400">
             {title}
           </h2>
@@ -51,7 +51,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
         <p className="mt-3 font-light leading-8 text-xl">
           {shortDesc}
         </p>
-        <Link to={`${import.meta.env.VITE_PATH}posts/${id}`}>
+        <Link to={`/posts/${id}`}>
           <button
             type="button"
             className="rounded-full px-5 py-2 mt-3 text-blue-400 border-blue-400 border text-base md:text-xl hover:bg-blue-400 hover:text-white transition duration-300"

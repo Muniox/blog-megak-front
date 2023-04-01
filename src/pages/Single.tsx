@@ -40,7 +40,7 @@ export const Single = () => {
     }
   };
 
-  const postDate = new Date(post.date);
+  const postDate = new Date(post ? post.date : new Date());
   const now = new Date();
   const isWithin7Days = (now.getTime() - postDate.getTime()) <= 7 * 24 * 60 * 60 * 1000;
 
@@ -48,7 +48,7 @@ export const Single = () => {
     ? formatDistanceToNow(postDate, { addSuffix: true, locale: pl })
     : format(postDate, 'dd-MM-yyyy');
 
-  return (
+  return post ? (
     <div className="">
       <div className="">
         <img
@@ -68,7 +68,7 @@ export const Single = () => {
               {postPublishTime}
             </p>
           </div>
-          { currentUser
+          {currentUser
             ? currentUser.name === post.author && (
               <div className="">
                 <Link to="/write?edit=2" state={post}>
@@ -91,5 +91,6 @@ export const Single = () => {
         {post.desc}
       </div>
     </div>
-  );
+  )
+    : <div> brak posta</div>;
 };

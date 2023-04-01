@@ -13,7 +13,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fix-min-h-header z-30">
+    <header className=" z-30">
       <div className="md:flex xl:mt-10 md:mt-24">
         <div>
           <h1 className="font-bold text-2xl text-center mt-5 md:text-left md:text-5xl xl:text-7xl">

@@ -103,12 +103,16 @@ export const Register = () => {
         >
           Zarejestruj
         </button>
-        {err && <p>{err}</p>}
+        {err && <p className="text-red-600">{err}</p>}
         <span>
           Czy masz już swoje konto?
           <Link to="/login"> Logowanie</Link>
         </span>
       </form>
+      <p className="text-sm font-light">
+        * hasło powinno mieć długość 8 znaków oraz
+        składać się z jednej cyfry i znaku specjalnego
+      </p>
     </div>
   );
 };
