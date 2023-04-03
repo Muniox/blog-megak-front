@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, {
+  FormEvent, useState,
+} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
+import { getText } from '../utils/parser';
 
 export const Write = () => {
   const { state } = useLocation();
   console.log(useLocation());
   const [value, setValue] = useState(state?.title || '');
-  const [title, setTitle] = useState(state?.desc || '');
+  const [title, setTitle] = useState(getText(state?.desc) || '');
   const [file, setFile] = useState<string | Blob | null>(null);
-  const [category, setCat] = useState(state?.cat || '');
+  const [category, setCat] = useState(state?.category || '');
   // inna metoda, zamiast w jednym inpucie zrobimy w kilku, Register jest przykladem jednego inputa
 
   const navigate = useNavigate();
@@ -32,7 +35,7 @@ export const Write = () => {
     }
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const imgUrl = await upload();
 
@@ -82,45 +85,51 @@ export const Write = () => {
           </label>
           <div className="buttons">
             <button type="button">Save as draft</button>
-            <button type="button" onClick={handleSubmit}>Publish</button>
+            <button type="submit" onSubmit={handleSubmit}>Publish</button>
           </div>
         </div>
         <div className="item">
           <h1>Category</h1>
           <div className="">
             <label htmlFor="react">
-              <input type="radio" checked={category === 'React'} name="react" value="React" id="react" onChange={(e) => setCat(e.target.value)} />
+              <input type="radio" checked={category === 'React'} name="category" value="React" id="react" onChange={(e) => setCat(e.target.value)} />
               React
             </label>
           </div>
           <div className="">
-            <label htmlFor="science">
-              <input type="radio" checked={category === 'science'} name="cat" value="science" id="science" onChange={(e) => setCat(e.target.value)} />
-              Science
+            <label htmlFor="vanilla">
+              <input type="radio" checked={category === 'Vanilla JavaScript'} name="category" value="Vanilla JavaScript" id="vanilla" onChange={(e) => setCat(e.target.value)} />
+              Vanilla JavaScript
             </label>
           </div>
           <div className="">
-            <label htmlFor="technology">
-              <input type="radio" checked={category === 'technology'} name="cat" value="technology" id="technology" onChange={(e) => setCat(e.target.value)} />
-              Technology
+            <label htmlFor="node">
+              <input type="radio" checked={category === 'Node'} name="category" value="Node" id="node" onChange={(e) => setCat(e.target.value)} />
+              Node
             </label>
           </div>
           <div className="">
-            <label htmlFor="cinema">
-              <input type="radio" checked={category === 'cinema'} name="cat" value="cinema" id="cinema" onChange={(e) => setCat(e.target.value)} />
-              Cinema
+            <label htmlFor="express">
+              <input type="radio" checked={category === 'Express'} name="category" value="Express" id="express" onChange={(e) => setCat(e.target.value)} />
+              Express
             </label>
           </div>
           <div className="">
-            <label htmlFor="design">
-              <input type="radio" checked={category === 'design'} name="cat" value="design" id="design" onChange={(e) => setCat(e.target.value)} />
-              Design
+            <label htmlFor="typescript">
+              <input type="radio" checked={category === 'TypeScript'} name="category" value="TypeScript" id="typescript" onChange={(e) => setCat(e.target.value)} />
+              TypeScript
             </label>
           </div>
           <div className="">
-            <label htmlFor="food">
-              <input type="radio" checked={category === 'food'} name="cat" value="food" id="food" onChange={(e) => setCat(e.target.value)} />
-              Food
+            <label htmlFor="nest">
+              <input type="radio" checked={category === 'NestJS'} name="category" value="NestJS" id="nest" onChange={(e) => setCat(e.target.value)} />
+              NestJS
+            </label>
+          </div>
+          <div className="">
+            <label htmlFor="other">
+              <input type="radio" checked={category === 'Other'} name="category" value="Other" id="other" onChange={(e) => setCat(e.target.value)} />
+              Other
             </label>
           </div>
         </div>

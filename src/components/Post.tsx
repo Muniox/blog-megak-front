@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { pl } from 'date-fns/locale';
 import { PostEntityResponse } from 'types';
 import defaultUserImg from '../assets/deafult_author.svg';
+import { getText } from '../utils/parser';
 
 export const Post: FC<PostEntityResponse> = (props) => {
   const {
@@ -49,7 +50,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
           </p>
         </div>
         <p className="mt-3 font-light leading-8 text-xl">
-          {shortDesc}
+          {getText(shortDesc)}
         </p>
         <Link to={`/posts/${id}`}>
           <button

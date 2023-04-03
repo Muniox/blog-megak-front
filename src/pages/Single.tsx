@@ -7,6 +7,7 @@ import { pl } from 'date-fns/locale'; // better is date-fns
 import Edit from '../assets/edit.png';
 import Delete from '../assets/delete.png';
 import { AuthContext, AuthContextProps } from '../context/authContext';
+import { getText } from '../utils/parser';
 
 export const Single = () => {
   const [post, setPost] = useState<PostEntityResponse | null>(null);
@@ -32,7 +33,9 @@ export const Single = () => {
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`${import.meta.env.VITE_PATH}posts/${postId}`);
+      const res = await axios.delete(`${import.meta.env.VITE_PATH}posts/${postId}`, {
+        withCredentials: true,
+      });
       console.log(res.data);
       navigate('/');
     } catch (error) {
@@ -48,7 +51,6 @@ export const Single = () => {
     ? formatDistanceToNow(postDate, { addSuffix: true, locale: pl })
     : format(postDate, 'dd-MM-yyyy');
 
-  console.log(post.userId);
   return post ? (
     <div className="">
       <div className="">
@@ -89,7 +91,7 @@ export const Single = () => {
             : null}
         </div>
         <h1>{post.title}</h1>
-        {post.desc}
+        {getText(post.desc)}
       </div>
     </div>
   )
