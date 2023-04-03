@@ -48,6 +48,7 @@ export const Single = () => {
     ? formatDistanceToNow(postDate, { addSuffix: true, locale: pl })
     : format(postDate, 'dd-MM-yyyy');
 
+  console.log(post.userId);
   return post ? (
     <div className="">
       <div className="">
@@ -72,7 +73,7 @@ export const Single = () => {
             ? currentUser.name === post.author && (
               <div className="">
                 <Link to="/write?edit=2" state={post}>
-                  <img src={Edit} alt="" />
+                  <img src={Edit} alt="Edit" />
                 </Link>
                 <button
                   type="button"
@@ -80,7 +81,7 @@ export const Single = () => {
                 >
                   <img
                     src={Delete}
-                    alt="delete post"
+                    alt="Delete"
                   />
                 </button>
               </div>

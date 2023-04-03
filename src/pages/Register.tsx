@@ -97,6 +97,10 @@ export const Register = () => {
             Hasło
           </span>
         </label>
+        <p className="text-sm font-light">
+          * hasło powinno mieć długość 8 znaków oraz
+          składać się z jednej cyfry i znaku specjalnego
+        </p>
 
         <button
           type="submit"
@@ -109,10 +113,6 @@ export const Register = () => {
           <Link to="/login"> Logowanie</Link>
         </span>
       </form>
-      <p className="text-sm font-light">
-        * hasło powinno mieć długość 8 znaków oraz
-        składać się z jednej cyfry i znaku specjalnego
-      </p>
     </div>
   );
 };
