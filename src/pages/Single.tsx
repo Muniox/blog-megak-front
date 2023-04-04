@@ -7,7 +7,7 @@ import { pl } from 'date-fns/locale'; // better is date-fns
 import Edit from '../assets/edit.png';
 import Delete from '../assets/delete.png';
 import { AuthContext, AuthContextProps } from '../context/authContext';
-import { getText } from '../utils/parser';
+import { sanitizer } from '../utils/sanitizer';
 
 export const Single = () => {
   const [post, setPost] = useState<PostEntityResponse | null>(null);
@@ -74,7 +74,7 @@ export const Single = () => {
           {currentUser
             ? currentUser.name === post.author && (
               <div className="">
-                <Link to="/write?edit=2" state={post}>
+                <Link to={`/write?edit=${post.id}`} state={post}>
                   <img src={Edit} alt="Edit" />
                 </Link>
                 <button
@@ -91,7 +91,7 @@ export const Single = () => {
             : null}
         </div>
         <h1>{post.title}</h1>
-        {getText(post.desc)}
+        <p className="post-single" dangerouslySetInnerHTML={{ __html: sanitizer(post.desc) }} />
       </div>
     </div>
   )

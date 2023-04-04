@@ -94,11 +94,22 @@ export const Login = () => {
             Hasło
           </span>
         </label>
-        <button type="submit">Zaloguj</button>
+        <button
+          type="submit"
+          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl duration-300"
+        >
+          Zaloguj
+        </button>
         {err && <p className="text-red-600">{err}</p>}
         <span>
           Nie masz jeszcze konta?
-          <Link to="/register"> Zarejestruj się</Link>
+          <button
+            type="button"
+            className="ml-3 rounded-full primary-gradient text-white px-4 py-3 font-semibold text-sm duration-300"
+          >
+            <Link to="/register"> Zarejestruj się</Link>
+          </button>
+
         </span>
       </form>
     </div>

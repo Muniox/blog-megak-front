@@ -104,13 +104,19 @@ export const Register = () => {
 
         <button
           type="submit"
+          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl duration-300"
         >
           Zarejestruj
         </button>
         {err && <p className="text-red-600">{err}</p>}
         <span>
           Czy masz już swoje konto?
-          <Link to="/login"> Logowanie</Link>
+          <button
+            type="button"
+            className="ml-3 rounded-full primary-gradient text-white px-4 py-3 font-semibold text-sm duration-300"
+          >
+            <Link to="/login"> Logowanie</Link>
+          </button>
         </span>
       </form>
     </div>

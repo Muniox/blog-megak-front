@@ -6,13 +6,13 @@ import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
-import { getText } from '../utils/parser';
+import { sanitizer } from '../utils/sanitizer';
 
 export const Write = () => {
   const { state } = useLocation();
   console.log(useLocation());
-  const [value, setValue] = useState(state?.title || '');
-  const [title, setTitle] = useState(getText(state?.desc) || '');
+  const [title, setTitle] = useState(sanitizer(state?.title) || '');
+  const [value, setValue] = useState(sanitizer(state?.desc) || '');
   const [file, setFile] = useState<string | Blob | null>(null);
   const [category, setCat] = useState(state?.category || '');
   // inna metoda, zamiast w jednym inpucie zrobimy w kilku, Register jest przykladem jednego inputa
@@ -62,7 +62,7 @@ export const Write = () => {
     <div className="">
       <div className="">
         <input type="text" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
-        <div className="editorContainer">
+        <div className="">
           <ReactQuill className="" theme="snow" value={value} onChange={setValue} />
         </div>
       </div>
@@ -85,7 +85,7 @@ export const Write = () => {
           </label>
           <div className="buttons">
             <button type="button">Save as draft</button>
-            <button type="submit" onSubmit={handleSubmit}>Publish</button>
+            <button type="button" onClick={handleSubmit}>Publish</button>
           </div>
         </div>
         <div className="item">

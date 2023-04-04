@@ -35,7 +35,7 @@ export const Header = () => {
         <Link to="/register">
           <button
             type="button"
-            className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0"
+            className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0 duration-300"
           >
             Zarejestruj się
           </button>

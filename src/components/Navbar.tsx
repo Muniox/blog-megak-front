@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <nav className="relative flex place-content-between mt-5 ">
       <img src={Logo} alt="Logo JS DOSE - Your Daily Dose of JS" className="w-40 md:w-[220px]" />
-      <ul className="hidden md:flex gap-8 text-xl font-semibold leading-10">
+      <ul className="hidden md:flex gap-8 md:gap-1 text-xl font-semibold leading-10">
         <li>
           <Link to="/about" className=" block px-3 py-0.5 hover:text-blue-400">O nas</Link>
         </li>
