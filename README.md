@@ -10,7 +10,7 @@
 - [How to run client](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#how-to-run-client)
 - [Link to back-end](https://github.com/Muniox/blog-megak-back)
 
-### General info
+## General info
 
 I created a blog on JavaScript as a project for completion for the following reasons:
 
@@ -26,22 +26,22 @@ I created a blog on JavaScript as a project for completion for the following rea
 
 Overall, creating a JavaScript-focused blog as a project for completion allows me to demonstrate my skills, apply theoretical knowledge, and express my creativity, while aligning with the course requirements.
 
-### Demo
+## Demo
 
 Here is a working live demo: https://blog.truemuniox.usermd.net/
 
-### Technologies/frameworks/libraries used on front-end side of project
+## Technologies/frameworks/libraries used on front-end side of project
 
 - React 
 - Tailwind
 
-### Layout
+## Layout
 
 Below, I present the created layout in Figma, which has been slightly modified during the project development.
 
 ![image](https://user-images.githubusercontent.com/81775473/230794296-b6e12c09-0525-4d79-a4ba-3a73669d3156.png)
 
-### What has been accomplished on the front-end
+## What has been accomplished on the front-end
 
 - Authentication (React Context)
 - Authorization (JWT TOKEN)
@@ -54,7 +54,7 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - Editing posts by user
 - Implementation of pages using React and Tailwind (Home, Login, Register, Single, Write)
 
-### What has not been accomplished on the front-end
+## What has not been accomplished on the front-end
 
 - Errors only apper in console (modal should be implemented to show errors)
 - Serch input that should find posts by name not work
@@ -63,7 +63,7 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - There is no implementation of a admin interface to CRUD user data.
 - Implementation of missing pages using React and Tailwind (About, Contact)
 
-### How to run client
+## How to run client
 
 To run client in dev mode, file .env.development should have variable:
 
