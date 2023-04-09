@@ -75,7 +75,7 @@ To run client localy on pc, file .env.development should have variable:
 
 ![image](https://user-images.githubusercontent.com/81775473/230795957-5a1fdaf9-b5c8-4452-b3d0-42319dc6fc71.png)
 
-Then run dev scripts from npm package.json:
+Then run commands in console:
 
 ```
 npm i
