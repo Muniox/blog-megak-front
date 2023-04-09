@@ -66,6 +66,8 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - There is no implementation of a user interface to edit their own data.
 - There is no implementation of a admin interface to CRUD user data.
 - Implementation of missing pages using React and Tailwind (About, Contact)
+- No loaders
+- No costom 404 page for routing
 
 ## How to run client
 
