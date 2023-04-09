@@ -87,6 +87,11 @@ npm i
 npm run dev
 ```
 
+## Back-end
+
+Here is a back-end repository: https://github.com/Muniox/blog-megak-back
+
+
 
 
 
