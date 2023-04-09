@@ -2,12 +2,13 @@
 
 ## Table of content
 
-- [Demo](https://github.com/Muniox/blog-megak-front/tree/develop/README.md#demo)
-- [Technologies/frameworks/libraries used on Front-end side of project](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#technologiesframeworkslibraries-used-on-front-end-side-of-project)
-- [Figma Layout](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#layout)
-- [What has been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#what-has-been-accomplished-on-the-front-end)
-- [What has not been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#what-has-not-been-accomplished-on-the-front-end)
-- [How to run client](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#how-to-run-client)
+- [General Info](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#general-info)
+- [Demo](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#demo)
+- [Technologies/frameworks/libraries used on Front-end side of project](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#technologiesframeworkslibraries-used-on-front-end-side-of-project)
+- [Figma Layout](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#layout)
+- [What has been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#what-has-been-accomplished-on-the-front-end)
+- [What has not been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#what-has-not-been-accomplished-on-the-front-end)
+- [How to run client](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#how-to-run-client)
 - [Link to back-end](https://github.com/Muniox/blog-megak-back)
 
 ## General info
