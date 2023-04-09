@@ -53,9 +53,9 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - Filter posts by category on Home page
 - Sanitize output from backend on front-end using "dompurify" package
 - Integration with simple rich text editor
-- Creating posts by user
-- Editing posts by user
-- Deleting posts by user
+- User can create post
+- User can edit his own post
+- User can delete his own post
 - Implementation of pages using React and Tailwind (Home, Login, Register, Single, Write)
 
 ## What has not been accomplished on the front-end
