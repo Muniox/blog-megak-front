@@ -2,7 +2,7 @@
 
 ## Table of content
 
-- [Demo](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#demo)
+- [Demo](https://github.com/Muniox/blog-megak-front/tree/develop/README.md#demo)
 - [Technologies/frameworks/libraries used on Front-end side of project](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#technologiesframeworkslibraries-used-on-front-end-side-of-project)
 - [Figma Layout](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#layout)
 - [What has been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#what-has-been-accomplished-on-the-front-end)
