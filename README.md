@@ -8,6 +8,7 @@
 - [What has been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#what-has-been-accomplished-on-the-front-end)
 - [What has not been accomplished on the front-end](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#what-has-not-been-accomplished-on-the-front-end)
 - [How to run client](https://github.com/Muniox/blog-megak-front/edit/develop/README.md#how-to-run-client)
+- [Link to back-end](https://github.com/Muniox/blog-megak-back)
 
 ### General info
 
@@ -29,7 +30,7 @@ Overall, creating a JavaScript-focused blog as a project for completion allows m
 
 Here is a working live demo: https://blog.truemuniox.usermd.net/
 
-### Technologies/frameworks/libraries used on Front-end side of project
+### Technologies/frameworks/libraries used on front-end side of project
 
 - React 
 - Tailwind
