@@ -33,6 +33,7 @@ Here is a working live demo: https://blog.truemuniox.usermd.net/
 
 ## Technologies/frameworks/libraries used on front-end side of project
 
+- TypeScript
 - React 
 - Tailwind
 
