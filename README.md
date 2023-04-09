@@ -55,6 +55,7 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - Integration with simple rich text editor
 - Creating posts by user
 - Editing posts by user
+- Deleting posts by user
 - Implementation of pages using React and Tailwind (Home, Login, Register, Single, Write)
 
 ## What has not been accomplished on the front-end
