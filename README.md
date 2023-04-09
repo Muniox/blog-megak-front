@@ -1,4 +1,4 @@
-# JS Dose - Your Daily Dose of JS (blog-megak-front)
+# Blog JS Dose - Your Daily Dose of JS (blog-megak-front)
 
 ## Table of content
 
