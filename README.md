@@ -47,6 +47,7 @@ Below, I present the created layout in Figma, which has been slightly modified d
 - Authentication (React Context)
 - Authorization (JWT TOKEN)
 - Routing
+- Responsive web design (mobile first)
 - Fetch posts data and show on Home page
 - Filter posts by category on Home page
 - Sanitize output from backend on front-end using "dompurify" package
