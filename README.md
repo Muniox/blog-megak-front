@@ -36,7 +36,6 @@ Overall, creating a JavaScript-focused blog as a project for completion allows m
 **Here is a working live demo: https://blog.truemuniox.usermd.net/**
 
 
-
 ## Technologies/frameworks/libraries used on front-end side of project
 
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a> TypeScript
@@ -47,7 +46,7 @@ Overall, creating a JavaScript-focused blog as a project for completion allows m
 
 ## Layout
 
-Below, I present the created layout in Figma, which has been slightly modified during the project development.
+Here is the layout I created in Figma, which has undergone slight modifications during the development of the project.
 
 ![image](https://user-images.githubusercontent.com/81775473/230794296-b6e12c09-0525-4d79-a4ba-3a73669d3156.png)
 
@@ -79,7 +78,7 @@ Below, I present the created layout in Figma, which has been slightly modified d
 
 ## How to run client
 
-To run client localy on pc, file .env.development should have variable:
+In order to run the API locally on your PC, the .env.development file should contain the following variable:
 
 ```
 VITE_PATH='http://localhost:3000/'
