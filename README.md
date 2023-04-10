@@ -78,6 +78,12 @@ Here is the layout I created in Figma, which has undergone slight modifications 
 
 ## How to run client
 
+Clone repository:
+
+```
+https://github.com/Muniox/blog-megak-front
+```
+
 In order to run the API locally on your PC, the .env.development file should contain the following variable:
 
 ```
