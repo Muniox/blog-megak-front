@@ -1,5 +1,8 @@
 # Blog JS Dose - Your Daily Dose of JS (blog-megak-front)
 
+![image](https://user-images.githubusercontent.com/81775473/230874424-73b87184-489a-4666-81c6-84507945bf46.png)
+
+
 ## Table of content
 
 - [General Info](https://github.com/Muniox/blog-megak-front/blob/develop/README.md#general-info)
@@ -29,13 +32,18 @@ Overall, creating a JavaScript-focused blog as a project for completion allows m
 
 ## Demo
 
-Here is a working live demo: https://blog.truemuniox.usermd.net/
+
+**Here is a working live demo: https://blog.truemuniox.usermd.net/**
+
+
 
 ## Technologies/frameworks/libraries used on front-end side of project
 
-- TypeScript
-- React 
-- Tailwind
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a> TypeScript
+
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a> React 
+
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss.svg" width="36" height="36" alt="Tailwind" /></a> Tailwind
 
 ## Layout
 
@@ -45,29 +53,29 @@ Below, I present the created layout in Figma, which has been slightly modified d
 
 ## What has been accomplished on the front-end
 
-- Authentication (React Context)
-- Authorization (JWT TOKEN)
-- Routing
-- Responsive web design (mobile first)
-- Fetch posts data and show on Home page
-- Filter posts by category on Home page
-- Sanitize output from backend on front-end using "dompurify" package
-- Integration with simple rich text editor
-- User can create post
-- User can edit his own post
-- User can delete his own post
-- Implementation of pages using React and Tailwind (Home, Login, Register, Single, Write)
+- [x] Authentication (React Context)
+- [x] Authorization (JWT TOKEN)
+- [x] Routing
+- [x] Responsive web design (mobile first)
+- [x] Fetch posts data and show on Home page
+- [x] Filter posts by category on Home page
+- [x] Sanitize output from backend on front-end using "dompurify" package
+- [x] Integration with simple rich text editor
+- [x] User can create post
+- [x] User can edit his own post
+- [x] User can delete his own post
+- [x] Implementation of pages using React and Tailwind (Home, Login, Register, Single, Write)
 
 ## What has not been accomplished on the front-end
 
-- Errors only apper in console (modal should be implemented to show errors)
-- Serch input that should find posts by name not work
-- User can't change avatar (default avatar for all users)
-- There is no implementation of a user interface to edit their own data.
-- There is no implementation of a admin interface to CRUD user data.
-- Implementation of missing pages using React and Tailwind (About, Contact)
-- No loaders
-- No costom 404 page for routing
+- [ ] Errors only apper in console (modal should be implemented to show errors)
+- [ ] Serch input that should find posts by name not work
+- [ ] User can't change avatar (default avatar for all users)
+- [ ] There is no implementation of a user interface to edit their own data.
+- [ ] There is no implementation of a admin interface to CRUD user data.
+- [ ] Implementation of missing pages using React and Tailwind (About, Contact)
+- [ ] No loaders
+- [ ] No costom 404 page for routing
 
 ## How to run client
 
