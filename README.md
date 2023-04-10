@@ -74,7 +74,7 @@ Here is the layout I created in Figma, which has undergone slight modifications 
 - [ ] There is no implementation of a admin interface to CRUD user data.
 - [ ] Implementation of missing pages using React and Tailwind (About, Contact)
 - [ ] No loaders
-- [ ] No costom 404 page for routing
+- [ ] No custom 404 page for routing
 
 ## How to run client
 
