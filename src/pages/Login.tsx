@@ -101,15 +101,17 @@ export const Login = () => {
           Zaloguj
         </button>
         {err && <p className="text-red-600">{err}</p>}
-        <span>
+        <span className="flex flex-col gap-6 sm:flex-row sm:items-center">
           Nie masz jeszcze konta?
-          <button
-            type="button"
-            className="ml-3 rounded-full primary-gradient text-white px-4 py-3 font-semibold text-sm duration-300"
-          >
-            <Link to="/register"> Zarejestruj się</Link>
-          </button>
 
+          <Link to="/register">
+            <button
+              type="button"
+              className="rounded-full primary-gradient text-white px-4 py-3 font-semibold text-sm duration-300 mx-auto block"
+            >
+              Zarejestruj się
+            </button>
+          </Link>
         </span>
       </form>
     </div>

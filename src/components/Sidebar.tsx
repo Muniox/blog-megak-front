@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { AuthContext, AuthContextProps } from '../context/authContext';
 
 export const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const { currentUser, logout } = useContext(AuthContext) as AuthContextProps;
 
   return (
     <>
@@ -36,18 +38,48 @@ export const Sidebar = () => {
       >
         <nav className="mt-16 text-xl font-semibold text-white">
           <ul className="leading-10">
+            {currentUser && (
+              <li className="leading-10 block py-3 underline-offset-4 underline">
+                {currentUser?.name}
+              </li>
+            )}
+            {currentUser && (
+              <li>
+                <NavLink to="/write" className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')} onClick={() => setShowSidebar(!showSidebar)}>Utwórz post</NavLink>
+              </li>
+            )}
             <li>
-              <Link to="/about" className="leading-10 block py-3">O nas</Link>
+              <NavLink to="/about" className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')} onClick={() => setShowSidebar(!showSidebar)}>O nas</NavLink>
             </li>
             <li>
-              <Link to="/" className="leading-10 block py-3">Blog</Link>
+              <NavLink to="/" className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')} onClick={() => setShowSidebar(!showSidebar)}>Blog</NavLink>
             </li>
             <li>
-              <Link to="/contact" className="leading-10 block py-3">Kontakt</Link>
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')} onClick={() => setShowSidebar(!showSidebar)}>Kontakt</NavLink>
             </li>
-            <li>
-              <Link to="/login" className="leading-10 block py-3">Logowanie</Link>
-            </li>
+            {currentUser
+              ? (
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')}
+                    onClick={() => { logout(); setShowSidebar(!showSidebar); }}
+                  >
+                    Wyloguj
+                  </NavLink>
+                </li>
+              )
+              : (
+                <li>
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) => (isActive ? 'leading-10 block py-3 text-blue-400' : 'leading-10 block py-3')}
+                    onClick={() => setShowSidebar(!showSidebar)}
+                  >
+                    Logowanie
+                  </NavLink>
+                </li>
+              )}
           </ul>
         </nav>
       </div>
