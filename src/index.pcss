@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+}
+
+.myNameInput:focus ~ .input-text, 
+.myNameInput:not(:placeholder-shown).myNameInput:not(:focus) ~ .input-text {
+    @apply bg-white transform top-0 scale-50 -translate-x-[2.37rem] text-inherit z-30;
+}
+
+.myPasswordInput:focus ~ .input-text, 
+.myPasswordInput:not(:placeholder-shown).myPasswordInput:not(:focus) ~ .input-text {
+    @apply bg-white transform top-0 scale-50 -translate-x-5 text-inherit z-30;
+}
+
+.myInput:not(:placeholder-shown).myInput:focus ~ .input-text {
+    @apply text-blue-400
+}
+
+.myInput:placeholder-shown.myInput:focus ~ .input-text {
+    @apply text-blue-400
+}
+
+//* {
+//    border: 1px solid gray
+//}
+
+Body {
+    color: #363636
+}
+
+.fix-min-h-screen {
+    min-height: 100vh;
+}
+
+.fix-min-h-screen {
+    min-height: 100svh;
+}
+
+.fix-min-h-header {
+    min-height: 90vh;
+}
+
+.fix-min-h-header {
+    min-height: 90svh;
+}
+
+.navbar-full {
+    min-height: 100lvh;
+}
+
+.primary-gradient {
+    background: linear-gradient(270deg, #6C63FF -3.81%, #605D94 108.89%);
+    border: 1px solid #6C63FF;
+}
+
+.primary-gradient:hover{
+    background: transparent;
+    color: #6C63FF;
+}
+
+.post-text {
+    hyphens: auto;
+}
+
+.post-text ul {
+    @apply list-disc list-inside
+}
+
+.post-text ol {
+    @apply list-decimal list-inside
+}
+
+.post-text [href] {
+    @apply text-blue-400
+}
+
+.post-single ul {
+    @apply list-disc list-inside
+}
+
+.post-single ol {
+    @apply list-decimal list-inside
+}
+
+.post-single h1 {
+    @apply text-3xl
+}
+
+.post-single h2 {
+    @apply text-2xl
+}
+
+.post-single h3 {
+    @apply text-xl
+}
+
+.post-single [href] {
+    @apply text-blue-400
+}
+
