@@ -29,14 +29,14 @@ export const Register = () => {
   };
   return (
     <div
-      className="mt-8 flex-grow flex flex-col items-center justify-center gap-10"
+      className="mt-8 flex-grow flex flex-col items-center justify-center gap-5"
     >
       <h1 className="text-4xl">
         Rejestracja
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex mt-6 gap-10 justify-center items-center flex-col"
+        className="flex mt-6 gap-5 justify-center items-center flex-col"
       >
         <label
           htmlFor="name"
@@ -97,22 +97,31 @@ export const Register = () => {
             Hasło
           </span>
         </label>
+        <p className="text-sm font-light text-center">
+          * hasło powinno mieć długość 8 znaków oraz
+          składać się z jednej cyfry i znaku specjalnego
+        </p>
 
         <button
           type="submit"
+          className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl duration-300"
         >
           Zarejestruj
         </button>
         {err && <p className="text-red-600">{err}</p>}
-        <span>
+        <span className="flex flex-col gap-6 sm:flex-row sm:items-center">
           Czy masz już swoje konto?
-          <Link to="/login"> Logowanie</Link>
+
+          <Link to="/login">
+            <button
+              type="button"
+              className="rounded-full primary-gradient text-white px-4 py-3 font-semibold text-sm duration-300 block mx-auto"
+            >
+              Logowanie
+            </button>
+          </Link>
         </span>
       </form>
-      <p className="text-sm font-light">
-        * hasło powinno mieć długość 8 znaków oraz
-        składać się z jednej cyfry i znaku specjalnego
-      </p>
     </div>
   );
 };

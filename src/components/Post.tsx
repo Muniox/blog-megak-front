@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { pl } from 'date-fns/locale';
 import { PostEntityResponse } from 'types';
 import defaultUserImg from '../assets/deafult_author.svg';
+import { sanitizer } from '../utils/sanitizer';
 
 export const Post: FC<PostEntityResponse> = (props) => {
   const {
@@ -23,7 +24,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
   return (
     <div className="mt-20 flex flex-col max-w-[580px] items-start mx-auto xl:flex-row xl:max-w-full xl:gap-10 xl:place-content-between xl:even:flex-row-reverse">
       <img src={`/upload/${img}`} alt="" className="rounded-3xl xl:order-last" />
-      <div>
+      <div className="flex-grow">
         <div className="flex gap-8 mt-4 w-full xl:mt-0">
           <p className="font-bold hidden md:inline">
             Opublikowane:
@@ -37,7 +38,7 @@ export const Post: FC<PostEntityResponse> = (props) => {
           </p>
         </div>
         <Link to={`/posts/${id}`}>
-          <h2 className="font-light text-2xl mt-2 leading-8 md:text-3xl hover:text-blue-400">
+          <h2 className="text-base font-semibold md:font-light md:text-2xl mt-2 leading-5 md:leading-8 md:text-3xl hover:text-blue-400">
             {title}
           </h2>
         </Link>
@@ -48,9 +49,8 @@ export const Post: FC<PostEntityResponse> = (props) => {
             <span className="text-blue-400 ml-2">{author}</span>
           </p>
         </div>
-        <p className="mt-3 font-light leading-8 text-xl">
-          {shortDesc}
-        </p>
+
+        <p className="mt-3 font-light leading-5 md:leading-8 text-sm post-text md:text-xl" dangerouslySetInnerHTML={{ __html: sanitizer(shortDesc) }} />
         <Link to={`/posts/${id}`}>
           <button
             type="button"

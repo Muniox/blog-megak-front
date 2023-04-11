@@ -2,7 +2,6 @@ import React, {
   createContext, useEffect, useState, ReactNode, useMemo,
 } from 'react';
 import axios from 'axios';
-// eslint-disable-next-line import/no-unresolved
 import { SimpleEntityResponse } from 'types';
 
 interface User {
@@ -33,7 +32,9 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
 
   const contextValue: AuthContextProps = useMemo(() => {
     const login = async (inputs: User) => {
-      const res = await axios.post<SimpleEntityResponse>(`${import.meta.env.VITE_PATH}users/login`, inputs);
+      const res = await axios.post<SimpleEntityResponse>(`${import.meta.env.VITE_PATH}users/login`, inputs, {
+        withCredentials: true,
+      });
       setCurrentUser(res.data.userInfo);
     };
 

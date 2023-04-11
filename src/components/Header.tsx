@@ -23,10 +23,10 @@ export const Header = () => {
             </span>
           </h1>
           <p className="hidden md:block text-xl font-light md:mt-10 xl:mt-20 leading-10">
-            Node, React, Express oraz inne rzeczy powiązane z JavaScriptem –
-            o tym piszemy na naszym blogu poświęconym technologiom JS.
+            Node, React, Express oraz inne rzeczy powiązane z&nbsp;JavaScriptem –
+            o&nbsp;tym piszemy na naszym blogu poświęconym technologiom JS.
             Przedstawiamy zarówno podstawową wiedzę dla początkujących,
-            jak i bardziej zaawansowane tematy z zakresu JavaScript.
+            jak&nbsp;i&nbsp;bardziej zaawansowane tematy z&nbsp;zakresu JavaScript.
           </p>
         </div>
         <img src={Programmer} alt="Programista" className="mx-auto mt-4 md:max-w-[483px] xl:max-w-none xl:min-w-[702px] xl:mt-10" />
@@ -35,7 +35,7 @@ export const Header = () => {
         <Link to="/register">
           <button
             type="button"
-            className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0"
+            className="rounded-full primary-gradient text-white px-8 py-4 font-semibold text-xl block mx-auto md:mx-0 mt-5 xl:mt-0 duration-300"
           >
             Zarejestruj się
           </button>

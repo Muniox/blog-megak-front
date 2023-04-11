@@ -12,6 +12,7 @@ import { Register } from './pages/Register';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Single } from './pages/Single';
+import { Write } from './pages/Write';
 
 const Layout = () => (
   <>
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: '/posts/:id',
         element: <Single />,
+      },
+      {
+        path: '/write',
+        element: <Write />,
       },
     ],
   },

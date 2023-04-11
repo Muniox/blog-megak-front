@@ -1,0 +1,5 @@
+Należy wpisać ścieżkę do swojego backendu:
+
+VITE_PATH='http://localhost:3000/'
+
+Jeśli będziemy mieli inną ścieżkę, nie dostaniemy ciasteczka sesyjnego.
