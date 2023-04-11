@@ -9,7 +9,6 @@ import { Header } from '../components/Header';
 import { Post } from '../components/Post';
 
 export const Home = () => {
-  // @TODO ogranicz description do 200 znaków
   const [posts, setPosts] = useState<PostEntityResponse[] | []>([]);
 
   const cat = useLocation().search;

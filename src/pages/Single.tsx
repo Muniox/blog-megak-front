@@ -24,7 +24,6 @@ export const Single = () => {
     (async () => {
       try {
         const res = await axios.get<PostEntityResponse | null>(`${import.meta.env.VITE_PATH}posts/${postId}`);
-        console.log(res.data, postId);
         setPost(await res.data); // nie dodałem await i spowodowało problemy wydajnościowe
       } catch (error) {
         console.log(error);

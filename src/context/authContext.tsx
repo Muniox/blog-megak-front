@@ -2,7 +2,6 @@ import React, {
   createContext, useEffect, useState, ReactNode, useMemo,
 } from 'react';
 import axios from 'axios';
-// eslint-disable-next-line import/no-unresolved
 import { SimpleEntityResponse } from 'types';
 
 interface User {
