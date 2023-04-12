@@ -75,6 +75,7 @@ Here is the layout I created in Figma, which has undergone slight modifications 
 - [ ] Implementation of missing pages using React and Tailwind (About, Contact)
 - [ ] No loaders
 - [ ] No custom 404 page for routing
+- [ ] Pagination
 
 ## How to run client
 
