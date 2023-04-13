@@ -12,7 +12,6 @@ import { sanitizer } from '../utils/sanitizer';
 export const Write = () => {
   const { state } = useLocation();
 
-  console.log(state);
   const [title, setTitle] = useState(sanitizer(state?.title) || '');
   const [value, setValue] = useState(sanitizer(state?.desc) || '');
   const [file, setFile] = useState<string | Blob | null>(null);
@@ -56,18 +55,28 @@ export const Write = () => {
 
     try {
       // eslint-disable-next-line no-unused-expressions
-      state ? await axios.put(`${import.meta.env.VITE_PATH}posts/${state.id}`, {
-        title, desc: value, category, img: file ? imgUrl : '',
-      }, { withCredentials: true }) : await axios.post(`${import.meta.env.VITE_PATH}posts/`, {
-        title,
-        desc: value,
-        category,
-        img: file ? imgUrl : '',
-        date: format(Date.now(), 'yyyy-MM-dd HH:mm:ss'),
-      }, {
-        withCredentials: true,
-      });
-      navigate(`/posts/${state?.id}`); // powinno nawigować zamiast do głównej to do tego postu!
+      if (state) {
+        await axios.put(`${import.meta.env.VITE_PATH}posts/${state.id}`, {
+          title,
+          desc: value,
+          category,
+          img: file ? imgUrl : '',
+        }, { withCredentials: true });
+        navigate(`/posts/${state?.id}`);
+        console.log('update');
+      } else {
+        const res = await axios.post(`${import.meta.env.VITE_PATH}posts/`, {
+          title,
+          desc: value,
+          category,
+          img: file ? imgUrl : '',
+          date: format(Date.now(), 'yyyy-MM-dd HH:mm:ss'),
+        }, {
+          withCredentials: true,
+        });
+        navigate(`/posts/${res.data.postId}`);
+      }
+      // powinno nawigować zamiast do głównej to do tego postu!
     } catch (err) {
       if (axios.isAxiosError<AxiosError>(err)) {
         console.log(err.response?.data.message);
