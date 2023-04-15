@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { PostEntityResponse } from 'types';
 import Shape from '../assets/shape.svg';
 import { CollapsibleList } from '../components/Collapse';
@@ -18,8 +18,12 @@ export const Home = () => {
       try {
         const res = await axios.get<PostEntityResponse[]>(`${import.meta.env.VITE_PATH}posts${cat}`);
         setPosts(await res.data);
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        if (axios.isAxiosError<AxiosError>(err)) {
+          alert(err.response?.data.message);
+        } else {
+          console.error(err);
+        }
       }
     })();
   }, [cat]);

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { formatDistanceToNow, format } from 'date-fns';
 import { PostEntityResponse } from 'types';
 import { pl } from 'date-fns/locale'; // better is date-fns
@@ -25,8 +25,12 @@ export const Single = () => {
       try {
         const res = await axios.get<PostEntityResponse | null>(`${import.meta.env.VITE_PATH}posts/${postId}`);
         setPost(await res.data); // nie dodałem await i spowodowało problemy wydajnościowe
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        if (axios.isAxiosError<AxiosError>(err)) {
+          alert(err.response?.data.message);
+        } else {
+          console.error(err);
+        }
       }
     })();
   }, [postId]);
@@ -38,8 +42,12 @@ export const Single = () => {
       });
       console.log(res.data);
       navigate('/');
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      if (axios.isAxiosError<AxiosError>(err)) {
+        alert(err.response?.data.message);
+      } else {
+        console.error(err);
+      }
     }
   };
 

@@ -42,8 +42,10 @@ export const Write = () => {
         return res.data;
       }
     } catch (err) {
-      if (axios.isAxiosError<AxiosError, Record<string, unknown>>(err)) {
-        console.log(err.response?.data?.message);
+      if (axios.isAxiosError<AxiosError>(err)) {
+        alert(err.response?.data.message);
+      } else {
+        console.error(err);
       }
     }
   };
@@ -63,7 +65,6 @@ export const Write = () => {
           img: file ? imgUrl : '',
         }, { withCredentials: true });
         navigate(`/posts/${state?.id}`);
-        console.log('update');
       } else {
         const res = await axios.post(`${import.meta.env.VITE_PATH}posts/`, {
           title,
@@ -79,9 +80,11 @@ export const Write = () => {
       // powinno nawigować zamiast do głównej to do tego postu!
     } catch (err) {
       if (axios.isAxiosError<AxiosError>(err)) {
-        console.log(err.response?.data.message);
+        alert(err.response?.data.message);
         // const errorMessage = err.response?.data?.message as string;
         // setError([true, errorMessage]);
+      } else {
+        console.error(err);
       }
     }
   };
